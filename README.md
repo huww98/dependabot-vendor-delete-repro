@@ -43,7 +43,3 @@ dependabot update -f job.yml -o out.yml -v "$PWD/dependabot-core/updater/lib:/ho
 
 With `directory: /` instead of `directories: [/]` in `job.yml`, the deletion is reported correctly.
 
-> [!NOTE]
-> dependabot CLI v1.94.0 does not serve the `blocked_versions` endpoint that the current updater image calls,
-> so the job aborts with `Malformed blocked versions response`. Until the CLI supports it, patch
-> `internal/server/api.go` to answer `GET .../blocked_versions` with `{"data":[]}`.
