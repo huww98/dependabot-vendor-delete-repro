@@ -1,0 +1,14 @@
+job:
+  package-manager: go_modules
+  allowed-updates:
+    - update-type: all
+  dependency-groups:
+    - name: all
+      rules:
+        patterns:
+          - "*"
+  source:
+    provider: github
+    repo: huww98/dependabot-vendor-delete-repro
+    directories:
+      - /
